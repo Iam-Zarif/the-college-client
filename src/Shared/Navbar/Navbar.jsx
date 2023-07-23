@@ -30,7 +30,7 @@ const Navbar = () => {
   );
     return (
       <Container>
-        <div className="mt-5 basic-font">
+        <div  className="mt-5 basic-font">
           <div className="navbar ">
             <div className="navbar-start">
               <div className="dropdown">
@@ -57,7 +57,10 @@ const Navbar = () => {
                   {navItems}
                 </ul>
               </div>
-              <Link to="/" className="hover:shadow-sm rounded-full p-2 hover:shadow-black flex text-white items-center gap-5 text-3xl lg:text-6xl ">
+              <Link
+                to="/"
+                className="hover:shadow-sm rounded-full p-2 hover:shadow-black flex text-white items-center gap-5 text-3xl lg:text-6xl "
+              >
                 <img src={pic} alt="" />
                 <p className="logo-name">
                   <span className="text-blue-400">Degree</span> Camp
@@ -70,7 +73,9 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="navbar-end">
-              <a className="btn">Button</a>
+              <Link to="/login" className="btn">
+                Login
+              </Link>
             </div>
           </div>
         </div>
