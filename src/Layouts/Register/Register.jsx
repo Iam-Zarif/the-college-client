@@ -1,9 +1,33 @@
 import img from "../../assets/scl.gif";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Container from "../../Container/Container";
+import Auth from "../../Hooks/Auth";
 
 const Register = () => {
+    const {createUser} = Auth();
+    const navigate = useNavigate();
+    const handleRegister = (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const password = form.password.value;
+      const photo = form.photo.value;
+
+      const userData = { name, email, password, photo };
+      console.log(userData);
+
+      createUser(email,password)
+      .then(res =>{
+  const newUser = res.newUser;
+  console.log(newUser)
+//   updateProfile(res.user, { displayName: name, photoURL: photo });
+ navigate("/");
+  
+})
+.catch(error => console.log(error))
+    };
   return (
     <div>
       <Container>
@@ -15,7 +39,7 @@ const Register = () => {
             <div className="shadow-lg shadow-black rounded-xl">
               <p className="text-3xl text-center">Please Register</p>
               <div className="mt-10">
-                <form>
+                <form onSubmit={handleRegister}>
                   <div className="flex flex-col gap-5">
                     <input
                       type="text"
@@ -38,7 +62,7 @@ const Register = () => {
                     <input
                       type="url"
                       placeholder="Your Photo Link"
-                      name="url"
+                      name="photo"
                       className="mx-auto  input shadow-lg w-1/2 shadow-black block"
                     />
                   </div>
@@ -46,17 +70,13 @@ const Register = () => {
                     type="submit"
                     className="mx-auto block mt-10 shadow-blue-900 shadow-md px-5 py-2 rounded-xl text-xl hover:shadow-slate-500"
                   >
-                    Log in
+                    Register
                   </button>
-                  {/* <div className="flex justify-evenly mt-8 ">
-                    <img src={gog} alt="" />
-                    <img src={git} alt="" />
-                  </div> */}
                 </form>
                 <hr className="mt-8 w-1/2 mx-auto" />
                 <div>
                   <p className="text-xl text-center mt-10">
-                    Already have an account  ?{" "}
+                    Already have an account ?{" "}
                     <Link to="/login" className="underline text-white">
                       Login
                     </Link>

@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import Container from "../../Container/Container";
 import pic from "../../assets/school.png"
 import "./Navbar.css"
+import Auth from "../../Hooks/Auth";
 const Navbar = () => {
+  const { user, logOut } = Auth();
   const navItems = (
     <>
       <li>
@@ -30,7 +32,7 @@ const Navbar = () => {
   );
     return (
       <Container>
-        <div  className="mt-5 basic-font">
+        <div className="mt-5 basic-font">
           <div className="navbar ">
             <div className="navbar-start">
               <div className="dropdown">
@@ -72,10 +74,48 @@ const Navbar = () => {
                 {navItems}
               </ul>
             </div>
-            <div className="navbar-end">
-              <Link to="/login" className="btn">
-                Login
-              </Link>
+            <div className="navbar-end flex flex-col lg:flex-row gap-4">
+              <div className="">
+                {user ? (
+                  <div className="tooltip" data-tip={user.displayName}>
+                    <img
+                      src={user.photoURL}
+                      alt="image"
+                      className=" w-10 lg:w-14 rounded-full"
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <Link
+                      to="/login"
+                      className="border text-lg font-bold hover:shadow-xl hover:shadow-black hover:border-blue-500 px-4 py-2 rounded-xl"
+                    >
+                      Log in
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <div>
+                {user ? (
+                  <div>
+                    <button
+                      className="border text-lg font-bold hover:shadow-xl hover:shadow-black hover:border-blue-500 px-4 py-2 rounded-xl"
+                      onClick={logOut}
+                    >
+                      Log out
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <Link
+                      to="/register"
+                      className="border text-lg font-bold hover:shadow-xl hover:shadow-black hover:border-blue-500 px-4 py-2 rounded-xl"
+                    >
+                      Register
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
