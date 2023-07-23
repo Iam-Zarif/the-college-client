@@ -4,6 +4,7 @@ import Home from "../Components/Home/Home/Home";
 import Login from "../Layouts/Login/Login";
 import Register from "../Layouts/Register/Register";
 import AllColleges from "../Layouts/AllColleges/AllColleges";
+import Error from "../Error/Error";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       {path:"/allColleges", element:<AllColleges></AllColleges>}
     ]
   },
+  {path:"/*" , element:<Error></Error>}
 ]);
 
 export default router

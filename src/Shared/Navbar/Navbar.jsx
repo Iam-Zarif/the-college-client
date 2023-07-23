@@ -32,7 +32,7 @@ const Navbar = () => {
   );
     return (
       <Container>
-        <div className="shadow-lg shadow-black rounded-3xl mt-5 basic-font fixed top-0 z-10 lg:w-[1800px]">
+        <div className="shadow-lg bg-slate-800 shadow-black rounded-3xl mt-5 basic-font fixed top-0 z-10 lg:w-[1800px]">
           <div className="navbar ">
             <div className="navbar-start">
               <div className="dropdown">
