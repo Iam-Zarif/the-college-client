@@ -9,30 +9,30 @@ const Navbar = () => {
   const navItems = (
     <>
       <li>
-        <Link className=" hover:shadow-lg hover:shadow-black hover:text-white">
+        <Link to="/" className=" hover:shadow-lg hover:shadow-black hover:text-white">
           Home
         </Link>
       </li>
       <li>
-        <a className=" hover:shadow-lg hover:shadow-black hover:text-white">
+        <Link to="/allColleges" className=" hover:shadow-lg hover:shadow-black hover:text-white">
           Colleges
-        </a>
+        </Link>
       </li>
       <li>
-        <a className=" hover:shadow-lg hover:shadow-black hover:text-white">
+        <Link className=" hover:shadow-lg hover:shadow-black hover:text-white">
           Admission
-        </a>
+        </Link>
       </li>
       <li>
-        <a className=" hover:shadow-lg hover:shadow-black hover:text-white">
+        <Link className=" hover:shadow-lg hover:shadow-black hover:text-white">
           My College
-        </a>
+        </Link>
       </li>
     </>
   );
     return (
       <Container>
-        <div className="mt-5 basic-font">
+        <div className="shadow-lg shadow-black rounded-3xl mt-5 basic-font fixed top-0 z-10 lg:w-[1800px]">
           <div className="navbar ">
             <div className="navbar-start">
               <div className="dropdown">

@@ -3,6 +3,7 @@ import Main from "../Layouts/Main/Main";
 import Home from "../Components/Home/Home/Home";
 import Login from "../Layouts/Login/Login";
 import Register from "../Layouts/Register/Register";
+import AllColleges from "../Layouts/AllColleges/AllColleges";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,8 @@ const router = createBrowserRouter([
     children:[
       {path:"/" , element:<Home></Home>},
       {path:"/login" , element:<Login></Login>},
-      {path:"/register" , element:<Register></Register>}
+      {path:"/register" , element:<Register></Register>},
+      {path:"/allColleges", element:<AllColleges></AllColleges>}
     ]
   },
 ]);

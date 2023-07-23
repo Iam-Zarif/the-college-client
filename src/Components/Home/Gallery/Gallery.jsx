@@ -14,7 +14,7 @@ import photo from "../../../assets/Screenshot-2020-05-12-at-4.22.00-PM-1024x1007
 
 const Gallery = () => {
   return (
-    <div className="mx-auto p-24">
+    <div className="mx-auto p-24 mt-28">
       <div>
         <p className="text-center mb-12 text-3xl text-blue-500 basic-font font-semibold shadow-xl shadow-black w-1/2 mx-auto py-2 rounded-xl">
           Our Memorable Moments
