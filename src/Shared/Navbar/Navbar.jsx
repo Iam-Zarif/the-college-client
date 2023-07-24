@@ -32,7 +32,7 @@ const Navbar = () => {
   );
     return (
       <Container>
-        <div className="shadow-lg bg-slate-800 shadow-black rounded-3xl mt-5 basic-font fixed top-0 z-10 lg:w-[1800px]">
+        <div className=" shadow-lg bg-[#363a41] shadow-black rounded-3xl ml-10 lg:ml-0 basic-font fixed top-0 z-10 lg:w-[1800px]">
           <div className="navbar ">
             <div className="navbar-start">
               <div className="dropdown">
@@ -77,12 +77,14 @@ const Navbar = () => {
             <div className="navbar-end flex flex-col lg:flex-row gap-4">
               <div className="">
                 {user ? (
-                  <div className="tooltip" data-tip={user.displayName}>
-                    <img
-                      src={user.photoURL}
-                      alt="image"
-                      className=" w-10 lg:w-14 rounded-full"
-                    />
+                  <div className="tooltip" data-tip={user?.displayName}>
+                    <Link to="/userInfo">
+                      <img
+                        src={user?.photoURL}
+                        alt="image"
+                        className=" w-10 lg:w-14 rounded-full"
+                      />
+                    </Link>
                   </div>
                 ) : (
                   <div>
@@ -101,6 +103,7 @@ const Navbar = () => {
                     <button
                       className="border text-lg font-bold hover:shadow-xl hover:shadow-black hover:border-blue-500 px-4 py-2 rounded-xl"
                       onClick={logOut}
+
                     >
                       Log out
                     </button>

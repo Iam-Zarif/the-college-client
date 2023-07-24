@@ -3,8 +3,10 @@ import img from "../../assets/scl.gif";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "../../Container/Container";
 import Auth from "../../Hooks/Auth";
+import Title from "../../Title/Title";
 
 const Register = () => {
+  Title("DEGREE CAMP | REGISTER")
     const {createUser} = Auth();
     const navigate = useNavigate();
     const handleRegister = (e) => {
@@ -24,7 +26,13 @@ const Register = () => {
   console.log(newUser)
 //   updateProfile(res.user, { displayName: name, photoURL: photo });
  navigate("/");
-  
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Your work has been saved",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 })
 .catch(error => console.log(error))
     };

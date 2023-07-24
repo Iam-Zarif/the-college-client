@@ -8,7 +8,21 @@ import Container from "../../Container/Container";
 // import Auth from "../../Hooks/Auth";
 
 import Auth from "../../Hooks/Auth";
+import { GithubAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../Firebase/firebase.config";
+import Title from "../../Title/Title";
 const Login = () => {
+  Title("DEGREE CAMP | LOGIN")
+   const auth = getAuth(app);
+  const gitHub = new GithubAuthProvider()
+  const gitHubLogIn =() =>{
+signInWithPopup(auth, gitHub)
+.then(result =>{
+  const user = result.user;
+  console.log(user)
+})
+.catch(error => console.log(error))
+  }
   const navigate = useNavigate();
   const { googleSignIn, logIn } = Auth();
   const handleLogin = (e) => {
@@ -24,13 +38,28 @@ const Login = () => {
         console.log(user);
         navigate("/");
         form.reset();
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
       .catch((error) => console.log(error));
   };
 const handleGoogleSignIn =() =>{
   googleSignIn()
   .then(result =>{console.log(result)
+    
   navigate("/");
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Your work has been saved",
+    showConfirmButton: false,
+    timer: 1500,
+  });
   })
   .catch(error => console.log(error))
 }
@@ -60,7 +89,6 @@ const handleGoogleSignIn =() =>{
                     />
                   </div>
                   <button
-                    
                     type="submit"
                     className="mx-auto block mt-10 shadow-blue-900 shadow-md px-5 py-2 rounded-xl text-xl hover:shadow-slate-500"
                   >
@@ -68,9 +96,19 @@ const handleGoogleSignIn =() =>{
                   </button>
                   <div className="flex justify-evenly mt-5 ">
                     <Link onClick={handleGoogleSignIn}>
-                      <img src={gog} alt="" className="hover:shadow-xl hover:shadow-black rounded-full p-1"/>
+                      <img
+                        src={gog}
+                        alt=""
+                        className="hover:shadow-xl hover:shadow-black rounded-full p-1"
+                      />
                     </Link>
-                    <img src={git} alt="" className="hover:shadow-xl hover:shadow-black rounded-full p-1"/>
+                    <Link onClick={gitHubLogIn}>
+                      <img
+                        src={git}
+                        alt=""
+                        className="hover:shadow-xl hover:shadow-black rounded-full p-1"
+                      />
+                    </Link>
                   </div>
                 </form>
                 <hr className="mt-8 w-1/2 mx-auto" />

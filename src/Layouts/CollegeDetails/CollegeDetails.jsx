@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const CollegeDetails = () => {
+    
+    
+    
     return (
-        <div>
+        <div className='mt-44'>
             
         </div>
     );

@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import EachCollege from './EachCollege';
+import Title from '../../Title/Title';
 
 const AllColleges = () => {
+  Title("DEGREE CAMP | ALL COLLEGE")
     const [colleges, setCollege] = useState([])
     useEffect(() =>{
-fetch("http://localhost:5000/allCollege")
+fetch("https://the-college-server.vercel.app/allCollege")
 .then(res => res.json())
 .then(data =>{ setCollege(data)
 
 })
     },[])
     return (
-      <div className="mt-48" data-aos="fade-down" data-aos-duration="3000">
+      <div className="basic-font mt-48" data-aos="fade-down" data-aos-duration="3000">
         <div>
           <p className="text-center my-10 text-4xl basic-font text-blue-500 w-1/2 mx-auto shadow-xl shadow-black rounded-xl py-2">
             Here Our All Colleges

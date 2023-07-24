@@ -4,7 +4,7 @@ import logo from "../../assets/school.png";
 const Footer = () => {
     return (
       <Container>
-        <div className="mt-20">
+        <div className="mt-20 basic-font">
           <footer className="footer p-10 bg-base-200 text-base-content rounded-xl">
             <div className="mx-auto lg:mx-0">
               <img src={logo} alt="" />

@@ -24,8 +24,8 @@ const Gallery = () => {
       className="mx-auto p-24 mt-12"
       data-aos="fade-up"
       data-aos-anchor-placement="top-center"
+      data-aos-duration="3000"
     >
-      
       <div>
         <p className="text-center mb-12 text-3xl text-blue-500 basic-font font-semibold shadow-xl shadow-black w-1/2 mx-auto py-2 rounded-xl">
           Our Memorable Moments
@@ -46,31 +46,31 @@ const Gallery = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={photo1} className="w-full h-96" alt="" />
+          <img src={photo1} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo2} className="w-full h-96" alt="" />
+          <img src={photo2} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo3} className="w-full h-96" alt="" />
+          <img src={photo3} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo4} className="w-full h-96" alt="" />
+          <img src={photo4} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo5} className="w-full h-96" alt="" />
+          <img src={photo5} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo6} className="w-full h-96" alt="" />
+          <img src={photo6} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo7} className="w-full h-96" alt="" />
+          <img src={photo7} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo1} className="w-full h-96" alt="" />
+          <img src={photo1} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo1} className="w-full h-96" alt="" />
+          <img src={photo1} className="lg:w-full h-36 w-44 lg:h-96" alt="" />
         </SwiperSlide>
       </Swiper>
     </div>

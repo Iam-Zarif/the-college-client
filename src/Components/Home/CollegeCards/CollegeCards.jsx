@@ -5,7 +5,7 @@ import Container from '../../../Container/Container';
 const CollegeCards = () => {
     const [colleges, setCollege] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/allCollege")
+      fetch("https://the-college-server.vercel.app/allCollege")
         .then((res) => res.json())
         .then((data) => {
           setCollege(data);
@@ -13,7 +13,7 @@ const CollegeCards = () => {
     }, []);
     return (
       <Container>
-        <div className="mt-12" data-aos="fade-up" data-aos-duration="3000">
+        <div className="mt-12" data-aos="fade-down" data-aos-duration="3000">
           <div>
             <p className="text-center mb-12 text-3xl text-blue-500 basic-font font-semibold shadow-lg shadow-black w-1/2 mx-auto py-2 rounded-xl">
               Best Colleges
@@ -23,7 +23,7 @@ const CollegeCards = () => {
             {colleges.slice(0, 3).map((college) => {
               return (
                 <SingleHomeCollege
-                  key={college.Id}
+                  key={college._Id}
                   college={college}
                 ></SingleHomeCollege>
               );

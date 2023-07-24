@@ -3,10 +3,12 @@
 import { createContext, useEffect, useState } from "react";
 import app from "../Firebase/firebase.config";
 import {GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from "firebase/auth"
+import { useNavigate } from "react-router-dom";
 export const AuthContext = createContext();
 const auth = getAuth(app)
 
 const AuthProvider = ({children}) => {
+  
     const [loader, setLoading] = useState(true);
     const [user, setUser] = useState(null);
     const googleUser = new GoogleAuthProvider();
@@ -34,6 +36,7 @@ const AuthProvider = ({children}) => {
     const logOut = () => {
       setLoading(true);
       return signOut(auth);
+      
     };
 
     useEffect(() => {
