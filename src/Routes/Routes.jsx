@@ -5,6 +5,8 @@ import Login from "../Layouts/Login/Login";
 import Register from "../Layouts/Register/Register";
 import AllColleges from "../Layouts/AllColleges/AllColleges";
 import Error from "../Error/Error";
+import Admission from "../Layouts/Admission/Admission";
+import MyCollege from "../Layouts/MyCollege/MyCollege";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,9 @@ const router = createBrowserRouter([
       {path:"/" , element:<Home></Home>},
       {path:"/login" , element:<Login></Login>},
       {path:"/register" , element:<Register></Register>},
-      {path:"/allColleges", element:<AllColleges></AllColleges>}
+      {path:"/allColleges", element:<AllColleges></AllColleges>},
+      {path:"/admission" , element:<Admission></Admission>},
+      {path:"/myCollege" , element:<MyCollege></MyCollege>}
     ]
   },
   {path:"/*" , element:<Error></Error>}

@@ -13,10 +13,10 @@ const CollegeCards = () => {
     }, []);
     return (
       <Container>
-        <div className="mt-44">
+        <div className="mt-12" data-aos="fade-up" data-aos-duration="3000">
           <div>
-            <p className="text-center mb-12 text-3xl text-blue-500 basic-font font-semibold shadow-xl shadow-black w-1/2 mx-auto py-2 rounded-xl">
-              Our Memorable Moments
+            <p className="text-center mb-12 text-3xl text-blue-500 basic-font font-semibold shadow-lg shadow-black w-1/2 mx-auto py-2 rounded-xl">
+              Best Colleges
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-28">

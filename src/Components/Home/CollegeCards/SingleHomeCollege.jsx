@@ -9,9 +9,12 @@ const SingleHomeCollege = ({college}) => {
       events,
       research_history,
       sports,
+      
     } = college;
+    
     return (
       <div className="px-16 lg:px-0">
+        {console.log()}
         <div className="card  glass mx-auto mt-8 ">
           <figure>
             <img
@@ -43,13 +46,15 @@ const SingleHomeCollege = ({college}) => {
                 {sports[1]} || {sports[2]} || {sports[3]}
               </p>
             </div>
-            <div className='mt-4'>
+            <div className="mt-4">
               <Link className="text-xl text-slate-200 font-bold hover:shadow-xl hover:shadow-black rounded-xl p-1 ">
                 Research history
               </Link>
             </div>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Details</button>
+              <Link to="/:id">
+                <button className="btn btn-primary">Details</button>
+              </Link>
             </div>
           </div>
         </div>

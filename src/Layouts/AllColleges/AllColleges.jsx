@@ -11,17 +11,17 @@ fetch("http://localhost:5000/allCollege")
 })
     },[])
     return (
-      <div className='mt-48'>
+      <div className="mt-48" data-aos="fade-down" data-aos-duration="3000">
         <div>
-            <p className='text-center my-10 text-4xl basic-font text-blue-500 w-1/2 mx-auto shadow-xl shadow-black rounded-xl py-2'>Here Our All Colleges</p>
+          <p className="text-center my-10 text-4xl basic-font text-blue-500 w-1/2 mx-auto shadow-xl shadow-black rounded-xl py-2">
+            Here Our All Colleges
+          </p>
         </div>
         <div className=" grid grid-cols-1 lg:grid-cols-3 gap-y-10">
-          {/* {
-                colleges.map(college =>{
-                    console.log(college)
-                })
-            } */}
-          
+          {colleges.map((college) => {
+            console.log(college);
+          })}
+
           {colleges.map((college) => {
             return (
               <EachCollege key={college._id} college={college}></EachCollege>

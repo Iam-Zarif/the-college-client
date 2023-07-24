@@ -36,7 +36,7 @@ const handleGoogleSignIn =() =>{
 }
     return (
       <Container>
-        <div className="mt-14 basic-font">
+        <div className="mt-48 basic-font">
           <div className="grid grid-cols-1 gap-10 lg:gap-0 lg:grid-cols-2">
             <div>
               <img src={img} className="rounded-2xl" alt="" />

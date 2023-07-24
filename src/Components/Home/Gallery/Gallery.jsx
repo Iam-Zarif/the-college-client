@@ -10,11 +10,22 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
-import photo from "../../../assets/Screenshot-2020-05-12-at-4.22.00-PM-1024x1007.png";
+import photo1 from "../../../assets/a.jpeg";
+import photo2 from "../../../assets/b.jfif";
+import photo3 from "../../../assets/c.jpg";
+import photo4 from "../../../assets/d.jpeg";
+import photo5 from "../../../assets/e.png";
+import photo6 from "../../../assets/f.jpg";
+import photo7 from "../../../assets/g.jpg";
 
 const Gallery = () => {
   return (
-    <div className="mx-auto p-24 mt-12">
+    <div
+      className="mx-auto p-24 mt-12"
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+    >
+      
       <div>
         <p className="text-center mb-12 text-3xl text-blue-500 basic-font font-semibold shadow-xl shadow-black w-1/2 mx-auto py-2 rounded-xl">
           Our Memorable Moments
@@ -35,31 +46,31 @@ const Gallery = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo1} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo2} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo3} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo4} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo5} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo6} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo7} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo1} className="w-full h-96" alt="" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={photo} className="" alt="" />
+          <img src={photo1} className="w-full h-96" alt="" />
         </SwiperSlide>
       </Swiper>
     </div>

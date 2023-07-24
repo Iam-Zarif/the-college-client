@@ -37,6 +37,8 @@ const Footer = () => {
             </div>
           </footer>
         </div>
+        {/* You can open the modal using ID.showModal() method */}
+        
       </Container>
     );
 };

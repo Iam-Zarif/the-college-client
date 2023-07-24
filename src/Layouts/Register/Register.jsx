@@ -29,7 +29,7 @@ const Register = () => {
 .catch(error => console.log(error))
     };
   return (
-    <div>
+    <div className="mt-48">
       <Container>
         <div className="mt-14 basic-font">
           <div className="grid grid-cols-1 gap-10 lg:gap-0 lg:grid-cols-2">
